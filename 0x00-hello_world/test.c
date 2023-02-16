@@ -5,6 +5,6 @@
  */
 int main(void)
 {
-printf("hello world in c! \n");/* printing hello world*/
+puts("hello world in c! ");/* printing hello world*/
 return (0);
 }
