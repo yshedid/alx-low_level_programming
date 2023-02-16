@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - the program entry
  * Return:exits the program
  */
