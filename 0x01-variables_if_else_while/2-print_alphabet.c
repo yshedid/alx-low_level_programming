@@ -11,5 +11,6 @@ while (chr <= 'z')
 	putchar(chr);
 	chr++;
 }
+putchar('\n');
 return (0);
 }
