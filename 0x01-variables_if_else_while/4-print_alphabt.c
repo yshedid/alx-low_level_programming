@@ -8,7 +8,7 @@ int main(void)
 char chr = 'a';
 while (chr <= 'z')
 {
-	if ((chr =='q')||(chr == 'e'))
+	if ((chr == 'q') || (chr == 'e'))
 	{
 		chr++;
 		continue;
