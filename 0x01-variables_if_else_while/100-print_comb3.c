@@ -17,6 +17,7 @@ while (i < 9)
 		if (i == 8)
 			break;
 		putchar(',');
+		putchar(' ');
 		j++;
 	}
 	i++;
