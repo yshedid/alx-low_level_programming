@@ -1,10 +1,11 @@
+#include "main.c"
 /**
  * print_alphabet_x10 - prints the alphabet in lower case
  */
 void print_alphabet_x10(void)
 {
 int counter;
-counter = 10
+counter = 10;
 while (counter > 0)
 {
 char i;
