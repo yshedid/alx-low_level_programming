@@ -30,9 +30,9 @@ void times_table(void)
 				break;
 			_putchar(',');
 			_putchar(' ');
+			temp += i;
 			if (temp < 10)
 				_putchar(' ');
-			temp += i;
 			j++;
 
 		}
