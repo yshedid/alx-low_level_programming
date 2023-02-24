@@ -27,13 +27,17 @@ void print_times_table(int n)
 		while (j < n)
 		{
 			if (temp < 10)
-				_putchar('0' + temp);
+				_putchar('0'+temp);
+			if ( temp < 100)
+			{
+				_putchar('0' + temp / 10);
+				_putchar('0' + temp % 10);
+			}
 			else
 			{
-				temp_last = temp % 10;
-				temp_first = (temp - temp_last) / 10;
-				_putchar('0' + temp_first);
-				_putchar('0' + temp_last);
+				_putchar('0' + temp / 100);
+				_putchar('0' + temp / 10);
+				_putchar('0' + temp % 10);
 			}
 			if (j == n - 1)
 				break;
