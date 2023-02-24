@@ -43,9 +43,9 @@ void print_times_table(int n)
 				break;
 			_putchar(',');
 			_putchar(' ');
+			temp += i;
 			if (temp < 100)
 				_putchar(' ');
-			temp += i;
 			if (temp < 10)
 				_putchar(' ');
 			j++;
