@@ -23,8 +23,8 @@ void print_times_table(int n)
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
-		 if (temp < 10);
-		_putchar(' ');
+		 if (temp < 10)
+			_putchar(' ');
 		while (j < n)
 		{
 			if (temp < 10)
