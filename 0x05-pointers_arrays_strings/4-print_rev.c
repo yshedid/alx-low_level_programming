@@ -14,7 +14,8 @@ void print_rev(char *s)
 		count++;
 		s++;
 	}
-	char str[count];
+	const x = count;
+	char str[x];
 
 	i = count - 1;
 	while (i >= 0)
