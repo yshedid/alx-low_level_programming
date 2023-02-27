@@ -16,7 +16,7 @@ void print_rev(char *s)
 	i = count - 1;
 	while (i >= 0)
 	{
-		putchar(s[i]);
+		printf("%c",s[i]);
 		i--;
 	}
 	putchar('\n');
