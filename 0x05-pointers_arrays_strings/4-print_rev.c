@@ -5,20 +5,24 @@
  */
 void print_rev(char *s)
 {
-	int i, count;
+	int i, count, j;
 
 	count = 0;
+	j = 0;
 	while (*s != 0)
 	{
 		count++;
 		s++;
 	}
+	char str[count];
+
 	i = count - 1;
 	while (i >= 0)
 	{
-		printf("%c",s[i]);
-		i--;
+	str[j] =  s[i];
+	i--;
+	j++;
 	}
-	putchar('\n');
+	printf("%s", str);
 
 }
