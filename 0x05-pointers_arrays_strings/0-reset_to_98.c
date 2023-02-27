@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * reset_to_98 - resets the actual value of the given variable
  * @n: pointer that recieves the value
