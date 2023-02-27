@@ -14,7 +14,9 @@ void print_rev(char *s)
 		count++;
 		s++;
 	}
+
 	int const x = count;
+
 	char str[x];
 
 	i = count - 1;
