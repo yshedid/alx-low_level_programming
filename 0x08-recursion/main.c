@@ -4,7 +4,7 @@ int main()
 {
 	int temp;
 	
-	temp = factorial(-12);
-	printf("%d \n",temp);
+	temp = _pow_recursion(3,2);
+	printf("%d\n",temp);
 	return 0;
 }
