@@ -3,8 +3,8 @@
 int main()
 {
 	int temp;
-	/*char arr[] = "he";*/
-	temp = _strlen_recursion("he");
+	
+	temp = factorial(5);
 	printf("%d \n",temp);
 	return 0;
 }
