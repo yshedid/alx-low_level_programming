@@ -1,6 +1,6 @@
 #include "main.h"
 int main()
 {
-	_puts_recursion("hello world");
+	_print_rev_recursion("hello world");
 	return 0;
 }
