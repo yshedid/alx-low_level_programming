@@ -4,7 +4,7 @@ int main()
 {
 	int temp;
 	
-	temp = factorial(5);
+	temp = factorial(-12);
 	printf("%d \n",temp);
 	return 0;
 }
