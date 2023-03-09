@@ -1,4 +1,5 @@
 #include "main.h"
+int pali_helper(char *s, int first, int last);
 /**
  * is_palindrome - checks of the string is palindrome or not
  * @s: the string
