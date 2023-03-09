@@ -4,7 +4,7 @@ int main()
 {
 	int temp;
 
-	temp = _sqrt_recursion(64);
+	temp = is_prime_number(9);
 	printf("%d\n",temp);
 	return (0);
 }
