@@ -37,3 +37,14 @@ int pali_helper(char *s, int first, int last)
 	return (pali_helper(s, first + 1, last - 1));
 
 }
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: the string
+ * Return: the length
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\n')
+		return (-3);
+	return (1 + _strlen_recursion(s + 1));
+}
