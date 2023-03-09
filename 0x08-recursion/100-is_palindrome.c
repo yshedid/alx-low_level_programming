@@ -7,9 +7,10 @@
  */
 int is_palindrome(char *s)
 {
+	int last;
+
 	if (*s == '\0')
 		return (1);
-	int last;
 
 	last = _strlen_recursion(s) - 1;
 	if (last == 0)
