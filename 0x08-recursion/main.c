@@ -3,8 +3,8 @@
 int main()
 {
 	int temp;
-	
-	temp = _pow_recursion(3,-2);
+
+	temp = _sqrt_recursion(64);
 	printf("%d\n",temp);
-	return 0;
+	return (0);
 }
