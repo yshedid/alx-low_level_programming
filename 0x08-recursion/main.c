@@ -4,7 +4,7 @@ int main()
 {
 	int temp;
 
-	temp = is_prime_number(9);
+	temp = is_palindrome("rioor");
 	printf("%d\n",temp);
 	return (0);
 }
