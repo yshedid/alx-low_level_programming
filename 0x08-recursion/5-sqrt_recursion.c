@@ -12,7 +12,7 @@ int _sqrt_helper(int n, int i)
 		return (i);
 	else if (i * i > n)
 		return (-1);
-	_sqrt_helper(n, i + 1);
+	return (_sqrt_helper(n, i + 1));
 }
 /**
  * _sqrt_recursion - calculates the natural square root of a given number
