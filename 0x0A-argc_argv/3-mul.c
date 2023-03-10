@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	if (argc < 3)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		return (1);
 	}
 	temp =  atoi(argv[1]) * atoi(argv[2]);
