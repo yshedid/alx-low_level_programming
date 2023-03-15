@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
+ * argstostr - concatenates two strings
+ * @ac: number of arguments
+ * @s2: arguments(strings)
  *
  * Return: the concatenated string
  */
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 			ptr[j + size_sum] = av[i][j];
 			j++;
 		}
-		ptr[j + size_sum ] ='\n';
+		ptr[j + size_sum] = '\n';
 		size_sum += strlen(av[i]) + 1;
 		i++;
 	}
