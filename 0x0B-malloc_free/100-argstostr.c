@@ -32,6 +32,7 @@ char *argstostr(int ac, char **av)
 			ptr[j + size_sum] = av[i][j];
 			j++;
 		}
+		ptr[j + size_sum] ='\n';
 		size_sum += strlen(av[i]);
 		i++;
 	}
