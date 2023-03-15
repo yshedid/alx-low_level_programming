@@ -4,7 +4,7 @@
 /**
  * argstostr - concatenates two strings
  * @ac: number of arguments
- * @s2: arguments(strings)
+ * @av: arguments(strings)
  *
  * Return: the concatenated string
  */
