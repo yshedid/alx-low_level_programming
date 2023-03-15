@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 	ptr = malloc(size_sum + 1);
-	j = 0;
+	i = 0;
 	size_sum = 0;
 	while (i < (size_t)ac)
 	{
