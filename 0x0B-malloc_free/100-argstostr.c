@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	{
 		while (j < strlen(av[i] + size_sum))
 		{
-			ptr[j] = av[i][j];
+			ptr[j] = av[i][j + size_sum];
 			j++;
 		}
 		size_sum += strlen(av[i]);
