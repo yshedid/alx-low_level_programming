@@ -22,14 +22,14 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 	ptr = malloc(size_sum + 1);
-	i = 0;
 	j = 0;
 	size_sum = 0;
 	while (i < (size_t)ac)
 	{
+		j = 0;
 		while (j < strlen(av[i] )+ size_sum)
 		{
-			ptr[j] = av[i][j + size_sum];
+			ptr[j + size_sum] = av[i][j];
 			j++;
 		}
 		size_sum += strlen(av[i]);
