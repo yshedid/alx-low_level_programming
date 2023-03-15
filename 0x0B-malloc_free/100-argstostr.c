@@ -8,7 +8,7 @@
  *
  * Return: the concatenated string
  */
-char *str_concat(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	char *ptr;
 	size_t i, j, size_sum;
