@@ -11,7 +11,7 @@
 char *str_concat(int ac, char **av)
 {
 	char *ptr;
-	int i, j, size_sum;
+	size_t i, j, size_sum;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
