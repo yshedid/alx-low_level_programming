@@ -16,7 +16,7 @@ char *str_concat(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	i = size_sum = 0;
-	while (i < ac)
+	while (i < (size_t)ac)
 	{
 		size_sum += strlen(av[i]);
 		i++;
@@ -25,7 +25,7 @@ char *str_concat(int ac, char **av)
 	i = 0;
 	j = 0;
 	size_sum = 0;
-	while (i < ac)
+	while (i < (size_t)ac)
 	{
 		while (j < strlen(av[i] + size_sum))
 		{
