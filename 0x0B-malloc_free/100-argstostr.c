@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 	i = size_sum = 0;
 	while (i < (size_t)ac)
 	{
-		size_sum += strlen(av[i]);
+		size_sum += strlen(*av[i]);
 		i++;
 	}
 	ptr = malloc(size_sum + 1);
@@ -27,12 +27,12 @@ char *argstostr(int ac, char **av)
 	size_sum = 0;
 	while (i < (size_t)ac)
 	{
-		while (j < strlen(av[i] + size_sum))
+		while (j < strlen(*av[i] + size_sum))
 		{
-			ptr[j] = av[i][j + size_sum];
+			ptr[j] = *av[i][j + size_sum];
 			j++;
 		}
-		size_sum += strlen(av[i]);
+		size_sum += strlen(*av[i]);
 		i++;
 	}
 	ptr[size_sum] = '\0';
