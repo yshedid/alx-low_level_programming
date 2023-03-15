@@ -24,10 +24,11 @@ int **alloc_grid(int width, int height)
 		j = 0;
 		while (j < width)
 		{
-			ptr[i][j] == 0;
+			ptr[i][j] = 0;
 			j++;
 		}
 		i++;
 	}
+	return (ptr);
 
 }
