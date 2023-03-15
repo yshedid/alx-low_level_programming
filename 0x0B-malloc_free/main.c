@@ -4,7 +4,7 @@ int main()
 {
 	char *ptr;
 
-	ptr = _strdup("hello world");
+	ptr = str_concat("hello"," world!");
 	if (ptr == NULL)
 		printf("null");
 	printf("hi %s", ptr);
