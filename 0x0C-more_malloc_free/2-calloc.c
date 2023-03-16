@@ -19,10 +19,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	i = 0;
-	while (i < nmemb)
+	while (i < nmemb * size)
 	{
-		ptr[i] = 0;
-		i ++;
+		ptr[i] = '0';
+		i++;
 	}
 	arr = ptr;
 	return (arr);
