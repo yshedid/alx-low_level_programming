@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "function_pointers.h"
 /**
  * print_name - prints a name in many different formats
  *		 depends on the passed function
