@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * array_iterator - applay a given function to each element of
  *			the given array
@@ -9,7 +10,9 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
-
+	
+	if (array == NULL || action == NULL)
+		return;
 	i = 0;
 	while (i < size)
 	{
