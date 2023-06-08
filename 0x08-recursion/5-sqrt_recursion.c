@@ -1,4 +1,5 @@
 #include "main.h"
+int sqrt_helper(int, int);
 /**
  * _sqrt_recursion - calculates the natural square root
  * @n: the numper
@@ -16,9 +17,9 @@ int _sqrt_recursion(int n)
  *
  * Return: the root or -1 if not found
  */
-int sqrt_helper(int x,int n)
+int sqrt_helper(int x, int n)
 {
-	if (x > n /2 )
+	if (x > n / 2)
 		return (-1);
 	if (x * x == n)
 		return (x);
