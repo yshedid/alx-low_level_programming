@@ -8,7 +8,7 @@ int sqrt_helper(int, int);
  */
 int _sqrt_recursion(int n)
 {
-	sqrt_helper(1, n);
+	return (sqrt_helper(1, n));
 }
 /**
  * sqrt_helper - helper function for _sqrt_recusrion
