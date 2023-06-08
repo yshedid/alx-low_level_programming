@@ -23,5 +23,5 @@ int sqrt_helper(int x, int n)
 		return (-1);
 	if (x * x == n)
 		return (x);
-	sqrt_helper(x + 1, n);
+	return (sqrt_helper(x + 1, n));
 }
