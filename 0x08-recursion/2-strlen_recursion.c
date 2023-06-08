@@ -5,7 +5,7 @@
  *
  * Return: the length
  */
-int _strlen_recursion(*s)
+int _strlen_recursion(char *s)
 {
 	int n;
 
