@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * is_prime_numper - checks if the numper is prime or not
+ * is_prime_number - checks if the numper is prime or not
  * @n: the numper
  *
  * Return: 1 if prime 0 otherwise
  */
-int is_prime_numper(int n)
+int is_prime_number(int n)
 {
 	if (n < 2)
 		return (0);
