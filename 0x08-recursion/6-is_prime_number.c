@@ -23,7 +23,7 @@ int is_prime_helper(int n, int c)
 {
 	if (n % c)
 		return (0);
-	if (t < n / 2)
+	if (c < n / 2)
 		return (is_prime_helper(n, c + 1));
 	return (1);
 }
