@@ -27,7 +27,7 @@ int _sqrt_helper(int n, int x)
 			return (x);
 		}
 		else
-			_sqrt_helper(n, x + 1);
+			return (_sqrt_helper(n, x + 1));
 	}
 	return (-1);
 
