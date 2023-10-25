@@ -21,7 +21,7 @@ int is_prime_number(int n)
  */
 int is_prime_helper(int n, int c)
 {
-	if (n % c)
+	if (n % c == 0)
 		return (0);
 	if (c < n / 2)
 		return (is_prime_helper(n, c + 1));
