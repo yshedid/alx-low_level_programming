@@ -7,9 +7,9 @@
  *
  * Return: always 0
  */
-int main(int argc, **argv)
+int main(int argc,char **argv)
 {
-	pritnf("%s", argv[0]);
+	pritnf("%s\n", argv[0]);
 	return (0);
 
 }
