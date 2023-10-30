@@ -27,16 +27,12 @@ int array_size(char *s)
  *
  * Return: the new string
  */
-char *str_concat(char *s1, char *s2, int last)
+char *str_concat(char *s1, char *s2, int last, size_1, size_2)
 {
-        int size_1;
-        int size_2;
         int new_size;
         int counter;
         char *ptr;
 
-        size_1 = array_size(s1);
-        size_2 = array_size(s2);
         new_size = size_1 + size_2;
         if (new_size == 0)
         {
@@ -78,22 +74,28 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	char *temp;
 	int count;
-	
+	int size_1;
+	int size_2;
+
 	ptr = NULL;
 	count = 0;
+	size = 0;
 	while (count < ac)
 	{
+		
+		size_2= array_size(av[count])
 		if (count + 1 == ac)
 		{
-			temp = str_concat(ptr, av[count], 1);
+			temp = str_concat(ptr, av[count], 1, size_1, size_2);
 			free(ptr);
 			ptr = temp;
 		}
 		else
-		{	temp = str_concat(ptr, av[count], 0);
+		{	temp = str_concat(ptr, av[count], 0, size_1, size_2);
 			free(ptr);
 			ptr = temp;
 		}
+		size_1 += size_2;
 		count++;
 	}
 	return (ptr);
