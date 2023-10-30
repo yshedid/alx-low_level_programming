@@ -94,7 +94,7 @@ char *argstostr(int ac, char **av)
 			free(ptr);
 			ptr = temp;
 		}
-		size_1 += size_2 ;
+		size_1 += size_2 + 1;
 		count++;
 	}
 	return (ptr);
