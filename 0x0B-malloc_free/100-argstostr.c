@@ -13,7 +13,7 @@ int array_size(char *s)
         count = 0;
         if (s == NULL)
                 return (count);
-        while (*s)
+        while (*s != '\0')
         {
                 count++;
                 s += 1;
