@@ -17,7 +17,7 @@ int array_size(char *s)
 		count++;
 		s += 1;
 	}
-	return (count);
+	return (count - 1);
 }
 
 /**
@@ -34,7 +34,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	size = array_size(str);
-	ptr = malloc(sizeof(char) * size);
+	ptr = malloc((sizeof(char) * size) - 1);
 	if (ptr == NULL)
 		return (NULL);
 
