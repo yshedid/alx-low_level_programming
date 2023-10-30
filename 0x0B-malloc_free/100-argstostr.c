@@ -39,10 +39,10 @@ char *str_concat(char *s1, char *s2, int last,int size_1,int size_2)
                 ptr[0] = '\0';
                 return (ptr);
         }
-		if (last == 0)
-			ptr = malloc(new_size);
-		else
-			ptr = malloc(new_size + 1);
+	if (last == 0)
+		ptr = malloc(new_size + 1);
+	else
+		ptr = malloc(new_size + 1);
         if (ptr)
         {
                 counter = 0;
@@ -95,10 +95,12 @@ char *argstostr(int ac, char **av)
 		{	temp = str_concat(ptr, av[count], 0, size_1, size_2);
 			free(ptr);
 			ptr = temp;
+
 		}
 		size_1 += size_2 + 1;
 		count++;
 	}
+	free(temp);
 	return (ptr);
 
 }
