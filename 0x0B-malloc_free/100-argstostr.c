@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2, int last)
 
         size_1 = array_size(s1);
         size_2 = array_size(s2);
-        new_size = size_1 + size_2;
+        new_size = size_1 + size_2 + 1;
         if (new_size == 0)
         {
                 ptr = malloc(1);
