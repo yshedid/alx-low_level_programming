@@ -44,7 +44,7 @@ char *str_concat(char *s1, char *s2, int last)
                 ptr[0] = '\0';
                 return (ptr);
         }
-	if (~last)
+	if (last == 0)
         	ptr = malloc(new_size * sizeof(char) + 1);
 	else
 		ptr = malloc(new_size * sizeof(char) + 2);
