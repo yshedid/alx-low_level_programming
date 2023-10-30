@@ -10,6 +10,7 @@
 int array_size(char *s)
 {
 	int count;
+
 	count = 0;
 	if (s == NULL)
 		return (count);
@@ -41,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	if (new_size == 0)
 	{
 		ptr = malloc(1);
-		ptr[0] ='\0';
+		ptr[0] = '\0';
 		return (ptr);
 	}
 	ptr = malloc(new_size * sizeof(char) + 1);
@@ -57,7 +58,6 @@ char *str_concat(char *s1, char *s2)
 			}
 			else
 			{
-				
 				ptr[counter] = s2[size_2];
 				size_2++;
 			}
