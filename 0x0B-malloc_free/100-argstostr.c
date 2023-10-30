@@ -83,7 +83,7 @@ char *argstostr(int ac, char **av)
 	while (count < ac)
 	{
 		
-		size_2 = array_size(av[count]);
+		size_2 = array_size(av[count]) + 1;
 		if (count + 1 == ac)
 		{
 			temp = str_concat(ptr, av[count], 1, size_1, size_2);
