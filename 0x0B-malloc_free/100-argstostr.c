@@ -45,9 +45,9 @@ char *str_concat(char *s1, char *s2, int last)
                 return (ptr);
         }
 	if (~last)
-        	ptr = malloc(new_size * sizeof(char));
+        	ptr = malloc(new_size * sizeof(char) + 1);
 	else
-		ptr = malloc(new_size * sizeof(char) + 1);
+		ptr = malloc(new_size * sizeof(char) + 2);
         if (ptr)
         {
                 counter = 0;
@@ -65,9 +65,10 @@ char *str_concat(char *s1, char *s2, int last)
                         }
                         counter++;
                 }
+		ptr[counter + 1] = '\n';
 		if (last)
 		{
-			ptr[counter + 1] ='\0';
+			ptr[counter + 2] ='\0';
 		}
                 return (ptr);
         }
