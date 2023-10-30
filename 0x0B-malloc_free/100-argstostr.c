@@ -62,12 +62,12 @@ char *str_concat(char *s1, char *s2, int last)
                         }
                         counter++;
                 }
+		ptr[counter] = '\n';
 		if (last == 1)
 		{
 			ptr[counter] ='\0';
 		}
-		else
-			ptr[counter] = '*';
+
                 return (ptr);
         }
         return (ptr);
