@@ -66,7 +66,7 @@ char *str_concat(char *s1, char *s2, int last)
 		ptr[counter] = '\n';
 		if (last == 1)
 		{
-			ptr[counter + 2] ='\0';
+			ptr[counter + 1] ='\0';
 		}
 
                 return (ptr);
