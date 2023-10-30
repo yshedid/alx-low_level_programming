@@ -1,25 +1,10 @@
 #include <stdlib.h>
-#include <stdio.h>
-char *argstostr(int ac, char **av);
 /**
  * array_size - returns the size of an array
  * @s: the string/array
  *
  * Return: size
  */
-int main(int ac, char *av[])
-{
-    char *s;
-
-    s = argstostr(ac, av);
-    if (s == NULL)
-    {
-        return (1);
-    }
-    printf("%s", s);
-    free(s);
-    return (0);
-}
 int array_size(char *s)
 {
         int count;
