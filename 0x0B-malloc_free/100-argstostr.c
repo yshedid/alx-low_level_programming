@@ -1,11 +1,25 @@
 #include <stdlib.h>
+#include <stdio.h>
+char *argstostr(int ac, char **av);
 /**
  * array_size - returns the size of an array
  * @s: the string/array
  *
  * Return: size
  */
+int main(int ac, char *av[])
+{
+    char *s;
 
+    s = argstostr(ac, av);
+    if (s == NULL)
+    {
+        return (1);
+    }
+    printf("%s", s);
+    free(s);
+    return (0);
+}
 int array_size(char *s)
 {
         int count;
@@ -41,7 +55,7 @@ char *str_concat(char *s1, char *s2, int last,int size_1,int size_2)
                 return (ptr);
         }
 	
-		ptr = malloc(new_size * sizeof(char) + 2);
+		ptr = malloc(new_size + 1);
         if (ptr)
         {
                 counter = 0;
