@@ -17,7 +17,7 @@ int array_size(char *s)
 		count++;
 		s += 1;
 	}
-	return (count - 1);
+	return (count);
 }
 
 /**
