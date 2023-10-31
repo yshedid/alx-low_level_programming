@@ -100,7 +100,6 @@ char *argstostr(int ac, char **av)
 		size_1 += size_2 + 1;
 		count++;
 	}
-	free(temp);
 	return (ptr);
 
 }
