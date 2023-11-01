@@ -10,6 +10,7 @@ char *word_helper(char *s, int, int);
 char **strtow(char *str)
 {
 	char **ptr;
+	char **temp;
 	int num_word;
 	int size_word;
 	int idx;
@@ -19,7 +20,7 @@ char **strtow(char *str)
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 
-	ptr = (char **)malloc(8);
+	ptr = NULL;
 	size_of_str = strlen(str);
 	i = 0;
 	while (i < size_of_str)
@@ -32,11 +33,19 @@ char **strtow(char *str)
 		}
 		else if (size_word > 0)
 		{
+			int j;
+
 			num_word += 1;
-			free(ptr);
+			temp = ptr;
 			ptr = (char **)malloc(num_word * 8 + 1);
 			if (ptr == NULL)
 				return (ptr);
+			j = 0;
+			while (j < num_word - 2 && temp != NULL)
+			{
+				ptr[j] = temp[j];
+			}
+			free(temp);
 
 			ptr[num_word - 1] = word_helper(str, size_word, idx);
 			size_word = 0;
