@@ -49,13 +49,11 @@ char **strtow(char *str)
 				j++;
 			}
 			free(temp);
-
 			ptr[num_word - 1] = word_helper(str, size_word, idx);
 			size_word = 0;
 		}
 		i++;
 	}
-	ptr[num_word] = '\0';
 	return (ptr);
 }
 /**
@@ -71,7 +69,7 @@ char *word_helper(char *s, int size, int idx)
 	char *ptr;
 	int count;
 
-	ptr = malloc(size);
+	ptr = malloc(size + 1);
 	size += idx;
 	if (ptr == NULL)
 		return (ptr);
@@ -82,5 +80,6 @@ char *word_helper(char *s, int size, int idx)
 		idx++;
 		count++;
 	}
+	ptr[count] = '\0';
 	return (ptr);
 }
