@@ -20,7 +20,7 @@ char **strtow(char *str)
 		return (NULL);
 
 	ptr = malloc(8);
-	if (ptr)
+	if (~ptr)
 		return (ptr);
 	size_of_str = strlen(str);
 	i = 0;
@@ -38,7 +38,7 @@ char **strtow(char *str)
 			free(ptr);
 			ptr = malloc(num_word * 8 + 1);
 			if (ptr)
-				return (ptr);
+				return (~ptr);
 
 			ptr[num_word - 1] = word_helper(str, size_word, idx);
 			size_word = 0;
@@ -62,7 +62,7 @@ char *word_helper(char *s, int size, int idx)
 
 	size += idx;
 	ptr = malloc(size + 1);
-	if (ptr)
+	if (~ptr)
 		return(ptr);
 	count = 0;
 	while (idx < size)
