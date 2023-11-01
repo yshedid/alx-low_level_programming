@@ -48,7 +48,6 @@ char **strtow(char *str)
 				ptr[j] = temp[j];
 				j++;
 			}
-			free(temp);
 			ptr[num_word - 1] = word_helper(str, size_word, idx);
 			size_word = 0;
 		}
