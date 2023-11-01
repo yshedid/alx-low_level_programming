@@ -25,9 +25,9 @@ char **strtow(char *str)
 	i = 0;
 	num_word = 0;
 	size_word = 0;
-	while (i < size_of_str)
+	while (i < size_of_str + 1)
 	{
-		if (str[i] != ' ')
+		if (str[i] != ' ' && i != size_of_str)
 		{
 			size_word += 1;
 			if (size_word == 1)

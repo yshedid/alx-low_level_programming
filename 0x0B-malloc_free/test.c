@@ -1,117 +1,108 @@
-#include <stdlib.h>
+// Online C compiler to run C program online
 #include <stdio.h>
-char *argstostr(int ac, char **av);
+#include <stdlib.h>
+#include <string.h>
+char *word_helper(char *s, int, int);
 /**
- * array_size - returns the size of an array
- * @s: the string/array
+ * strtow - divides a string into words
+ * @str: the string
  *
- * Return: size
+ * Return: and array of pointers to the words or NULL if it fails
  */
-int main(int ac, char *av[])
+char **strtow(char *str)
 {
-    char *s;
+        char **ptr;
+        char **temp;
+        int num_word;
+        int size_word;
+        int idx;
+        int size_of_str;
+        int i;
 
-    s = argstostr(ac, av);
-    if (s == NULL)
-    {
-        return (1);
-    }
-    printf("%s", s);
-    free(s);
-    return (0);
-}
-int array_size(char *s)
-{
-        int count;
-
-        count = 0;
-        if (s == NULL)
-                return (count);
-        while (*s != '\0')
-        {
-                count++;
-                s += 1;
-        }
-        return (count);
-}
-/**
- * str_concat - concatenats two strings
-* @s1: first string
- * @s2: second string
- *
- * Return: the new string
- */
-char *str_concat(char *s1, char *s2, int last,int size_1,int size_2)
-{
-        int new_size;
-        int counter;
-        char *ptr;
-
-        new_size = size_1 + size_2;
-        if (new_size == 0)
-        {
-                ptr = malloc(1);
-                ptr[0] = '\0';
-                return (ptr);
-        }
-		printf("new size is %d\n",new_size);
-                ptr = malloc(new_size * sizeof(char) + 2);
-        if (ptr)
-        {
-                counter = 0;
-                size_2 = 0;
-                while (counter < new_size)
-                {
-                        if (counter < size_1)
-                        {
-                                ptr[counter] = s1[counter];
-                        }
-                        else
-                        {
-                                ptr[counter] = s2[size_2];
-                                size_2++;
-                        }
-                        counter++;
-                }
-                ptr[counter] = '\n';
-                if (last == 1)
-                {
-                        ptr[counter + 1] ='\0';
-                }
-
-                return (ptr);
-        }
-        return (ptr);
-}
-char *argstostr(int ac, char **av)
-{
-        char *ptr;
-        char *temp;
-        int count;
-        int size_1;
-        int size_2;
+        if (str == NULL || strlen(str) == 0)
+                return (NULL);
 
         ptr = NULL;
-        count = 0;
-        size_1 = 0;
-        while (count < ac)
+        size_of_str = strlen(str);
+        i = 0;
+        size_word = 0;
+        num_word = 0;
+        while (i < size_of_str + 1)
         {
-
-                size_2 = array_size(av[count]) ;
-                if (count + 1 == ac)
+                if (str[i] != ' ' && i != size_of_str)
                 {
-                        temp = str_concat(ptr, av[count], 1, size_1, size_2);
-                        free(ptr);
-                        ptr = temp;
+
+                        size_word += 1;
+                        if (size_word == 1)
+                                idx = i;
                 }
-                else
-                {       temp = str_concat(ptr, av[count], 0, size_1, size_2);
-                        free(ptr);;
-                        ptr = temp;
+
+                else if (size_word > 0)
+                {
+                
+                        int j;
+                        num_word += 1;
+                        temp = ptr;
+                        ptr = (char **)malloc(num_word * 8 + 1);
+                        if (ptr == NULL)
+                                return (ptr);
+                        j = 0;
+                        while (j < num_word - 1 && temp != NULL)
+                        {
+                              
+                                ptr[j] = temp[j];
+                                j++;
+                        }
+                        free(temp);
+
+                        ptr[num_word - 1] = word_helper(str, size_word, idx);
+                        size_word = 0;
                 }
-                size_1 += size_2 + 1;
+                i++;
+        }
+        ptr[num_word] = '\0';
+        return (ptr);
+}
+char *word_helper(char *s, int size, int idx)
+{
+        char *ptr;
+        int count;
+
+        ptr = malloc(size + 1);
+        size += idx;
+        if (ptr == NULL)
+                return (ptr);
+        count = 0;
+        while (idx < size)
+        {
+                ptr[count] = s[idx];
+                idx++;
                 count++;
         }
+        ptr[count] = '\0';
         return (ptr);
+}
+void print_tab(char **tab)
+{
+    int i;
 
+    for (i = 0; tab[i] != NULL; ++i)
+    {
+        printf("%s\n", tab[i]);
+	free(tab[i]);
+    }
+}
+int main(void)
+{
+    char **tab;
+
+    tab = strtow("Talk is cheap. Show me the code.");
+    if (tab == NULL)
+    {
+        printf("Failed\n");
+        return (1);
+    }
+    print_tab(tab);
+    free(tab);
+    return (0);
 }
