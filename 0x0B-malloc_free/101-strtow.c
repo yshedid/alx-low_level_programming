@@ -80,6 +80,6 @@ char *word_helper(char *s, int size, int idx)
 		idx++;
 		count++;
 	}
-	ptr[size] = '\0';
+	ptr[count] = '\0';
 	return (ptr);
 }
