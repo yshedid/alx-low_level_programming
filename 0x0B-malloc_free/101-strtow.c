@@ -81,5 +81,6 @@ char *word_helper(char *s, int size, int idx)
 		idx++;
 		count++;
 	}
+	ptr[count] = '\0';
 	return (ptr);
 }
