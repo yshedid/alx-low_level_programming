@@ -20,8 +20,6 @@ char **strtow(char *str)
 		return (NULL);
 
 	ptr = (char **)malloc(8);
-	if (ptr == NULL)
-		return (ptr);
 	size_of_str = strlen(str);
 	i = 0;
 	while (i < size_of_str)
