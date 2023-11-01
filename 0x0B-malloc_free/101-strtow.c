@@ -50,6 +50,7 @@ char **strtow(char *str)
 			ptr[num_word - 1] = word_helper(str, size_word, idx);
 			size_word = 0;
 		}
+		i++;
 	}
 	ptr[num_word] = '\0';
 	return (ptr);
