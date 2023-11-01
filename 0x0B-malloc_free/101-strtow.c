@@ -39,7 +39,7 @@ char **strtow(char *str)
 
 			num_word += 1;
 			temp = ptr;
-			ptr = (char **)malloc(num_word * 8 + 1);
+			ptr = (char **)malloc(num_word * 8);
 			if (ptr == NULL)
 				return (ptr);
 			j = 0;
@@ -71,7 +71,7 @@ char *word_helper(char *s, int size, int idx)
 	char *ptr;
 	int count;
 
-	ptr = malloc(size + 1);
+	ptr = malloc(size);
 	size += idx;
 	if (ptr == NULL)
 		return (ptr);
