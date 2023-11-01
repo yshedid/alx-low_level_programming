@@ -39,7 +39,7 @@ char **strtow(char *str)
 
 			num_word += 1;
 			temp = ptr;
-			ptr = (char **)malloc(num_word * sizeof(char *));
+			ptr = (char **)malloc(num_word * sizeof(char *) + 1);
 			if (ptr == NULL)
 				return (ptr);
 			j = 0;
@@ -54,6 +54,7 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+	ptr[num_word] = '\0';
 	return (ptr);
 }
 /**
