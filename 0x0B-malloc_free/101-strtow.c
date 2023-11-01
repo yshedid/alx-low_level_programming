@@ -44,6 +44,7 @@ char **strtow(char *str)
 			while (j < num_word - 2 && temp != NULL)
 			{
 				ptr[j] = temp[j];
+				j++;
 			}
 			free(temp);
 
