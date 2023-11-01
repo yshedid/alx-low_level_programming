@@ -23,6 +23,8 @@ char **strtow(char *str)
 	ptr = NULL;
 	size_of_str = strlen(str);
 	i = 0;
+	num_word = 0;
+	size_word = 0;
 	while (i < size_of_str)
 	{
 		if (str[i] != ' ')
@@ -41,7 +43,7 @@ char **strtow(char *str)
 			if (ptr == NULL)
 				return (ptr);
 			j = 0;
-			while (j < num_word - 2 && temp != NULL)
+			while (j < num_word - 1 && temp != NULL)
 			{
 				ptr[j] = temp[j];
 				j++;
