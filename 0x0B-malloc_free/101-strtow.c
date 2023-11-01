@@ -71,7 +71,7 @@ char *word_helper(char *s, int size, int idx)
 	char *ptr;
 	int count;
 
-	ptr = malloc(size - 1);
+	ptr = malloc(size);
 	size += idx;
 	if (ptr == NULL)
 		return (ptr);
