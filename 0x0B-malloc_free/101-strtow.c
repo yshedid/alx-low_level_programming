@@ -19,7 +19,7 @@ char **strtow(char *str)
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 
-	ptr = malloc(8);
+	ptr = (char **)malloc(8);
 	if (ptr == NULL)
 		return (ptr);
 	size_of_str = strlen(str);
@@ -36,7 +36,7 @@ char **strtow(char *str)
 		{
 			num_word += 1;
 			free(ptr);
-			ptr = malloc(num_word * 8 + 1);
+			ptr = (char **)malloc(num_word * 8 + 1);
 			if (ptr == NULL)
 				return (ptr);
 
