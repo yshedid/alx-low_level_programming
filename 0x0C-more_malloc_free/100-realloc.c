@@ -33,6 +33,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	while (i < old_size && i < new_size)
 	{
 		new_ptr[i] = ptr_clone[i];
+		i++;
 	}
 	free(ptr);
 	return ((void *)new_ptr);
