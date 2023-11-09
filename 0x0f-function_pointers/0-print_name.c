@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "function_pointers.h"
 /**
  * print_name - excutes f callback function
  * @name: name to be printed
